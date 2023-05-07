@@ -1,10 +1,12 @@
 from api.oanda_api import OandaApi
 from infrastructure.instrument_collection import instrumentCollection
 from simulation.ma_cross import run_ma_sim
-if __name__ == '__main__':
-    #api = OandaApi()
+from dateutil import parser
+from infrastructure.collect_data import run_collection
 
-    #instrumentCollection.CreateFIle(api.get_account_instruments(), "./data")
+if __name__ == '__main__':
+    #api = OandaApi()    
     #instrumentCollection.LoadInstruments("./data")
-    #instrumentCollection.PrintInstruments()
+    #run_collection(instrumentCollection, api)
+    
     run_ma_sim()
